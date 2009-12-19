@@ -1,0 +1,58 @@
+[Project]
+Assembler=nasm
+Type=Win32 App
+Description=dserv
+Backup=$P\Bak\
+Group=1
+GroupExpand=1
+Debug=0
+[MakeDef]
+Menu=0,1,1,1,1,1,1,0
+1=4,O,$B\GORC,1
+2=3,O,$B\NASMW -fobj,2
+3=5,O,$B\ALINK -oPE,3 
+4=0,0,,5
+5=rsrc.obj,O,$B\CVTRES,rsrc.res
+6=*.obj,O,$B\NASMW -fobj,*.asm
+11=4,O,$B\GORC,1
+12=3,O,$B\NASMW -fobj,2
+13=5,O,$B\ALINK -oPE,3,\nasm\lib\win32.lib,4
+14=0,0,,5
+15=rsrc.obj,O,$B\CVTRES,rsrc.res
+16=*.obj,O,$B\NASMW -fobj,*.asm
+[MakeFiles]
+0=dserv.rap
+1=dserv.rc
+2=dserv.asm
+3=dserv.obj
+4=dserv.res
+5=dserv.exe
+6=dserv.def
+7=dserv.dll
+8=dserv.txt
+9=dserv.lib
+10=dserv.mak
+[Files]
+1=dserv.Asm
+2=dserv.inc
+3=Socket.asm
+4=Command.asm
+5=lib.asm
+[Size]
+3=0,0,0,0,926
+1=0,0,0,0,592
+2=0,0,0,0,2267
+4=0,0,0,0,2440
+5=0,0,0,0,2267
+[BookMark]
+0=
+1=
+2=
+3=
+4=
+5=
+6=
+7=
+8=
+9=
+[BreakPoint]
